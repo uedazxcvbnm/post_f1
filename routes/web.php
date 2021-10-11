@@ -17,4 +17,10 @@ Route::get('/test', function () {
     return view('welcome');
 });
 
-Route::get('/', 'App\Http\Controllers\SampleController@index');
+use App\Http\Controllers\SampleController;
+
+Route::get('/', [SampleController::class, 'index']);
+
+use App\Http\Controllers\TestController;
+
+Route::get('/test', [TestController::class, 'index']);

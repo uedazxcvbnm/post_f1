@@ -15,7 +15,7 @@ class PostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->morphs('user');
+            $table->unsignedBigInteger('user_id');
             $table->string('name', 255);
             $table->text('contents');
         });

@@ -24,3 +24,7 @@ Route::get('/', [SampleController::class, 'index']);
 use App\Http\Controllers\TestController;
 
 Route::get('/test', [TestController::class, 'index']);
+
+use App\Http\Controllers\PostController;
+
+Route::get('/posts', [PostController::class, 'index']);

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class PostsTable extends Migration
+class CommentTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class PostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->bigIncrements('id');
             
             $table->string('name', 255);
             $table->text('contents');
+            $table->timestamps();
         });
-
     }
 
     /**
@@ -29,6 +29,6 @@ class PostsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('posts');
+        //
     }
 }

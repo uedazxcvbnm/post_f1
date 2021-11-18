@@ -9,8 +9,8 @@ class Post extends Model
 {
     use HasFactory;
 
-    public function user()
+    public function comments()
     {
-        return $this->belongsTo('App\User');
+        return $this->hasMany(Comment::class);
     }
 }

@@ -9,8 +9,9 @@ use App\Models\Post;
 class PostController extends Controller
 {
     public function index() {
-        $posts = Post::all();
-        $data = ['posts' => $posts];
+        $posts = Post::find(1);
+        //$comments = $posts->comment;
+        $data = ['posts' => $posts, 'comments' => $posts->comments];
         return view('post', $data);
     }
 }

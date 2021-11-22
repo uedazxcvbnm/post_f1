@@ -28,3 +28,12 @@ Route::get('/test', [TestController::class, 'index']);
 use App\Http\Controllers\PostController;
 
 Route::get('/posts', [PostController::class, 'index']);
+
+# layout部分
+
+use App\Http\Controllers\LayoutController;
+Route::get('/layout', [LayoutController::class, 'index']);
+Route::get('/layout/users', [LayoutController::class, 'users']);
+Route::get('/layout/posts', [LayoutController::class, 'posts']);
+Route::get('/layout/comments', [LayoutController::class, 'comments']);
+

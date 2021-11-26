@@ -37,3 +37,7 @@ Route::get('/layout/users', [LayoutController::class, 'users']);
 Route::get('/layout/posts', [LayoutController::class, 'posts']);
 Route::get('/layout/comments', [LayoutController::class, 'comments']);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

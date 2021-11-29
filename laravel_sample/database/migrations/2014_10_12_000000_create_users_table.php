@@ -23,6 +23,11 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         });
     }
+        /*追加したもの
+        Schema::table('posts', function (Blueprint $table) {
+            $table->foreignId('user_id')->constrained('flights');
+        });
+        */
 
     /**
      * Reverse the migrations.

@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//use app\Http\Controllers\ComedianController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\Post2Controller;
+use App\Http\Controllers\UsercomController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +18,33 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome2');
 });
+Route::get('/index', 'HelloController@index');
+//Route::get('/comedian', [ComedianController::class,'index']);
+Route::get('/posts', [PostController::class,'index']);
+/*Route::get('/greeting', function () {
+    return 'Hello World';
+});*/
+//Route::get('/user', [UserController::class, 'index']);
+//Route::get('/comedian', [ComedianController::class,'index']);
+//Route::get('/',[App/Http/Controllers\Controller::class,'index'])->name('home');
+
+Route::get('/post2s', [Post2Controller::class,'index']); 
+//Route::get('/post2s', [Post2Controller::class,'index2']);
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();
+
+//レイアウト　テンプレート
+Route::get('/usercom',[UsercomController::class,'index']);
+Route::get('/comment_tmp',[UsercomController::class,'index2']);
+Route::get('/post_tmp',[UsercomController::class,'index3']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

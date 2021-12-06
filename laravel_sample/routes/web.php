@@ -17,9 +17,16 @@ use App\Http\Controllers\UsercomController;
 |
 */
 
+/*ホーム画面デフォルト
 Route::get('/', function () {
     return view('welcome2');
+});*/
+
+//ホーム画面　掲示板
+Route::get('/', function () {
+    return view('welcome3');
 });
+
 Route::get('/index', 'HelloController@index');
 //Route::get('/comedian', [ComedianController::class,'index']);
 Route::get('/posts', [PostController::class,'index']);
@@ -30,8 +37,9 @@ Route::get('/posts', [PostController::class,'index']);
 //Route::get('/comedian', [ComedianController::class,'index']);
 //Route::get('/',[App/Http/Controllers\Controller::class,'index'])->name('home');
 
+
 Route::get('/post2s', [Post2Controller::class,'index']); 
-//Route::get('/post2s', [Post2Controller::class,'index2']);
+Route::get('/post2s', [Post2Controller::class,'index2']);
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();

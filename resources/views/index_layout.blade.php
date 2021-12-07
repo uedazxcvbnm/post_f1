@@ -3,5 +3,5 @@
 @section('title', 'Home Page')
 
 @section('contents')
-    <p>ここはホームです</p>
+    <p>ここはホームです。</p>
 @endsection

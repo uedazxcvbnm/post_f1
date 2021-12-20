@@ -14,8 +14,17 @@ class Post extends Model
         return $this->hasMany(Comment::class);
     }
 
-    public function user()
+    /*public function user()
     {
         return $this->belongsTo(User::class);
+    }*/
+    protected $fillable = [
+        'user_id',
+        'name',
+        'contents', 
+    ];
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
     }
 }

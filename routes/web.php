@@ -25,7 +25,14 @@ Route::get('/layout/users', [LayoutController::class, 'users']);
 Route::get('/layout/posts', [LayoutController::class, 'posts']);
 Route::get('/layout/comments', [LayoutController::class, 'comments']);
 
+use App\Http\Controllers\NewpostController;
+//newpost
+Route::get('/newpost', [NewpostController::class,'Newpost']);
+//POSTメソッドの処理
+Route::post('/newpost', [NewpostController::class,'create']);
 
+//Authファサード
+use Illuminate\Support\Facades\Auth;
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

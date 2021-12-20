@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Post;
 use App\Models\Comment;
+use App\Http\Requests\PostRequest;
 
 class LayoutController extends Controller
 {
     public function index() {
-
         return view('index_layout');
     }
 
@@ -27,5 +27,5 @@ class LayoutController extends Controller
     public function comments() {
         $comments = Comment::all();
         return view('comments_layout', ['comments' => $comments]);
-    }
+    }    
 }

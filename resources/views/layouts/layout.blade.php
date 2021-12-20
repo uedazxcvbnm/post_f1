@@ -17,6 +17,7 @@
         <li><a href="/layout/users">Users</a></li>
         <li><a href="/layout/posts">Posts</a></li>
         <li><a href="/layout/comments">Comments</a></li>
+        <li><a href="/newpost">新規投稿</a></li>
     </ul>
 
 </body>
